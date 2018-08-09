@@ -37,7 +37,7 @@
             $.ajax(
                 {
                     type : 'POST',
-                    url : 'http://localhost:5000/api/todos',
+                    url : 'http://apitodolist-eoi.sytes.net/api/todos',
                     data : JSON.stringify(TODO),
                     contentType : 'application/json',
                     dataType : 'json'
@@ -54,7 +54,7 @@
     }
 
     function cargarTODOS(){
-        $.get('http://localhost:5000/api/todos')
+        $.get('http://apitodolist-eoi.sytes.net/api/todos')
             .then(todosServer => {
                 todos = todosServer;
                 pintarEnPantalla();
